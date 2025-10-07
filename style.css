@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: url("bg.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 20px;
+}
+
+.logo-small {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+ul {
+    list-style: square;
+    margin-left: 30px;
+}
+
+a {
+    color: #5bc0de;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+a:hover {
+    color: #8be9fd;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #aaa;
+}
