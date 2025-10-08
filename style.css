@@ -38,20 +38,36 @@ h2 { font-size:2.5rem; margin-bottom:30px; text-align:center; }
 
 /* CARDS */
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:30px; max-width:1200px; margin:0 auto; }
-.card { background: rgba(255,255,255,0.1); padding:20px; border-radius:12px; transition: transform 0.4s, opacity 0.4s; opacity:0; transform: translateY(30px); word-wrap: break-word; }
+.card { 
+    background: rgba(255,255,255,0.1); 
+    padding:20px; 
+    border-radius:12px; 
+    transition: transform 0.4s, opacity 0.4s; 
+    opacity:0; 
+    transform: translateY(30px); 
+    word-wrap: break-word; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:flex-start; 
+    overflow-wrap: break-word; 
+}
 .card:hover { transform: translateY(-10px); }
 body.light-mode .card { background: rgba(0,0,0,0.05); color:#111; }
 
-/* Discord-style embed */
+/* Discord-style embed inside card */
 .discord-embed { 
     background:#2f3136; 
     color:#fff; 
-    padding:10px; 
+    padding:12px 15px; 
     border-left:4px solid #ffd700; 
     border-radius:5px; 
     font-family:'Consolas','Courier New',monospace; 
     margin-top:10px; 
     word-wrap: break-word; 
+    overflow-wrap: break-word;
+    font-size:0.95rem;
+    white-space: pre-wrap;
+    line-height:1.4rem;
 }
 body.light-mode .discord-embed { background:#e0e0e0; color:#111; border-left:4px solid #e6c200; }
 
@@ -67,6 +83,7 @@ body.light-mode .discord-embed { background:#e0e0e0; color:#111; border-left:4px
     transform: translateY(30px); 
     transition: transform 0.4s, opacity 0.4s; 
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 body.light-mode .stat-card { background: rgba(0,0,0,0.05); color:#111; }
 
