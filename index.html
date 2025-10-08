@@ -1,42 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rampart | Discord Anti-Raid System</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rampart Bot</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="overlay">
-        <header>
-            <img src="logo.png" alt="Rampart Logo" class="logo">
-            <h1>Rampart</h1>
-            <p class="subtitle">Your Discord server’s last line of defense 🛡️</p>
-        </header>
 
-        <section class="content">
-            <h2>What is Rampart?</h2>
-            <p>Rampart is a custom-built Discord bot designed to protect your community from raids, spam attacks, and malicious users. 
-            It includes intelligent lockdowns, automatic backups, and live activity monitoring to keep your server secure at all times.</p>
+<header>
+  <img src="logo.png" alt="Rampart Logo" class="logo">
+  <nav>
+    <a href="#commands">Commands</a>
+    <a href="#features">Features</a>
+    <a href="tos.html">ToS</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="#invite">Invite</a>
+    <button id="toggle-theme" class="btn-small">🌙</button>
+  </nav>
+</header>
 
-            <h3>✨ Core Features</h3>
-            <ul>
-                <li>Automatic and manual lockdowns</li>
-                <li>Permission snapshot and restoration system</li>
-                <li>Raid detection and prevention</li>
-                <li>Smart status system</li>
-                <li>Detailed logging and server recovery tools</li>
-            </ul>
+<section class="hero">
+  <h1>Rampart Bot</h1>
+  <p>Protect your Discord server with automated snapshots, rebuilds, and smart raid defense. Keep your community safe effortlessly.</p>
+  <a href="#invite" class="btn">Invite Bot</a>
+</section>
 
-            <div class="links">
-                <a href="tos.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2025 Rampart. All rights reserved.</p>
-        </footer>
+<section id="commands">
+  <h2>Commands</h2>
+  <div class="cards">
+    <div class="card animate">
+      <h3>!rbackup</h3>
+      <p>Create a numbered snapshot of your server. (Server owner only)</p>
+      <pre class="discord-embed">📸 `!rbackup` — creates snapshot #00001</pre>
     </div>
+    <div class="card animate">
+      <h3>!rlist</h3>
+      <p>View stored snapshots and their creation dates.</p>
+      <pre class="discord-embed">ℹ️ `!rlist` — shows list of snapshots</pre>
+    </div>
+    <div class="card animate">
+      <h3>!rrebuild &lt;id&gt;</h3>
+      <p>Restore your server from a specific snapshot ID. (Server owner only)</p>
+      <pre class="discord-embed">🔁 `!rrebuild 3` — restores snapshot #00003</pre>
+    </div>
+    <div class="card animate">
+      <h3>!rlockdown start|end</h3>
+      <p>Manually toggle lockdown mode to protect channels.</p>
+      <pre class="discord-embed">🛑 `!rlockdown start` — activate lockdown</pre>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <h2>Features</h2>
+  <div class="cards">
+    <div class="card animate">
+      <h3>Automatic Snapshots</h3>
+      <p>Backups are created automatically at configurable intervals to keep your server safe.</p>
+    </div>
+    <div class="card animate">
+      <h3>Rebuild System</h3>
+      <p>Recover deleted channels, roles, and categories quickly from any saved snapshot.</p>
+    </div>
+    <div class="card animate">
+      <h3>Join Flood Detection</h3>
+      <p>Detect raid-like join patterns and activate lockdown automatically.</p>
+    </div>
+    <div class="card animate">
+      <h3>Spam Auto-Mute</h3>
+      <p>Prevents spam by auto-muting users who exceed message thresholds.</p>
+    </div>
+  </div>
+</section>
+
+<section id="stats">
+  <h2>Live Bot Stats</h2>
+  <div class="stats-container">
+    <div class="stat-card animate">
+      <h3>Guilds</h3>
+      <p id="guild-count">Loading...</p>
+    </div>
+    <div class="stat-card animate">
+      <h3>Snapshots</h3>
+      <p id="snapshot-count">Loading...</p>
+    </div>
+    <div class="stat-card animate">
+      <h3>Rebuilds</h3>
+      <p id="rebuild-count">Loading...</p>
+    </div>
+  </div>
+</section>
+
+<section id="invite">
+  <h2>Invite Rampart</h2>
+  <p style="text-align:center;">Click below to invite Rampart Bot to your server with admin permissions.</p>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID&permissions=8&scope=bot" class="btn">Invite Bot</a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Rampart Bot. <a href="tos.html">ToS</a> | <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script src="style.js"></script>
 </body>
 </html>
